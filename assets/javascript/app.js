@@ -1,58 +1,55 @@
 
 var card = $("#quiz-area");
 
-// Question set
 var questions = [
   {
-    question: "What was the first full length CGI movie?",
-    answers: ["A Bug's Life", "Monsters Inc.", "Toy Story", "The Lion King"],
-    correctAnswer: "Toy Story"
+    question: "What Is The Name Of Frank's Doctor Alter-Ego?",
+    answers: ["Dr Cricket", "Dr Mantis Toboggan", "Dr Magnum Dong", "Dr Froggy"],
+    correctAnswer: "Dr Mantis Toboggan"
   },
   {
-    question: "Which of these is NOT a name of one of the Spice Girls?",
-    answers: ["Sporty Spice", "Fred Spice", "Scary Spice", "Posh Spice"],
-    correctAnswer: "Fred Spice"
+    question: "In Season 10’s Opening Episode Which Baseball Player Does The Gang Attempt To Outdrink",
+    answers: ["Boss Hogg", "Chase Utley", "Wade Boggs", "Ryan Howard"],
+    correctAnswer: "Wade Boggs"
   },
   {
-    question: "Which NBA team won the most titles in the 90s?",
-    answers: ["New York Knicks", "Portland Trailblazers", "Los Angeles Lakers", "Chicago Bulls"],
-    correctAnswer: "Chicago Bulls"
+    question: "Which Iconic Action Film Series Does The Gang Attempt To Remake?",
+    answers: ["Lethal Weapon", "Thundergun Express", "Speed", "Die Hard"],
+    correctAnswer: "Lethal Weapon"
   },
   {
-    question: "Which group released the hit song, 'Smells Like Teen Spirit'?",
-    answers: ["Nirvana", "Backstreet Boys", "The Offspring", "No Doubt"],
-    correctAnswer: "Nirvana"
+    question: "What Was Frank Reynold’s Business Nickname?",
+    answers: ["The Tiger", "The Warthog", "The Honeybadger", "The Armadillo"],
+    correctAnswer: "The Warthog"
   },
   {
-    question: "Which popular Disney movie featured the song, 'Circle of Life'?",
-    answers: ["Aladdin", "Hercules", "Mulan", "The Lion King"],
-    correctAnswer: "The Lion King"
+    question: "What Is The Name Of The Italian Restaurant The Gang Frequent?",
+    answers: ["Gino's", "Milo's", "Luigi's", "Guigino's"],
+    correctAnswer: "Guigino's"
   },
   {
-    question:
-      "Finish this line from the Fresh Prince of Bel-Air theme song: 'I whistled for a cab and when it came near, the license plate said...'",
-    answers: ["Dice", "Mirror", "Fresh", "Cab"],
-    correctAnswer: "Fresh"
+    question:"What Species Of Animal Does Dennis’ Ex-Wife, Maureen Ponderosa, Want To Become?",
+    answers: ["Cat", "Mouse", "Raccoon", "Bird"],
+    correctAnswer: "Cat"
   },
   {
-    question: "What was Doug's best friend's name?",
-    answers: ["Skeeter", "Mark", "Zach", "Cody"],
-    correctAnswer: "Skeeter"
+    question: "Which High School Did The Male Members Of The Gang Attend?",
+    answers: ["St. John's Preparatory School", "St. Edmund's Preparatory School", "St. Mark's Preparatory School", "St. Joseph's Preparatory School"],
+    correctAnswer: "St. Joseph's Preparatory School"
   },
   {
-    question: "What was the name of the principal at Bayside High in Saved By The Bell?",
-    answers: ["Mr.Zhou", "Mr.Driggers", "Mr.Belding", "Mr.Page"],
-    correctAnswer: "Mr.Belding"
+    question: "Which Actor Played Mac’s Cousin, Country Mac?",
+    answers: ["Thomas Ian Nicholas", "Chris Klein", "Eddie Kaye Thomas", "Seann William Scott"],
+    correctAnswer: "Seann William Scott"
   }
 ];
 
-// Variable that will hold the setInterval
 var timer;
 
 var game = {
   correct: 0,
   incorrect: 0,
-  counter: 120,
+  counter: 90,
 
   countdown: function() {
     game.counter--;
@@ -80,7 +77,7 @@ var game = {
       }
     }
 
-    card.append("<button id='done'>Done</button>");
+    card.append("<button id='finished'>Finished</button>");
   },
 
   done: function() {
@@ -106,12 +103,10 @@ var game = {
   }
 };
 
-// CLICK EVENTS
-
 $(document).on("click", "#start", function() {
   game.start();
 });
 
-$(document).on("click", "#done", function() {
+$(document).on("click", "#finished", function() {
   game.done();
 });
